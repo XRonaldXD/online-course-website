@@ -1,6 +1,7 @@
 package com.course.website.config;
 
 import com.course.website.service.UserService;
+import jakarta.servlet.DispatcherType;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
@@ -31,6 +32,7 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
             .authorizeHttpRequests(auth -> auth
+                .dispatcherTypeMatchers(DispatcherType.FORWARD, DispatcherType.ERROR).permitAll()
                 .requestMatchers("/", "/login", "/register", "/h2-console/**").permitAll()
                 .requestMatchers("/files/**").authenticated()
                 .requestMatchers("/lectures/**", "/polls/**").authenticated()
