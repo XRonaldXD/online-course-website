@@ -29,4 +29,9 @@ public class CommentService {
 
     @Transactional
     public void deleteById(Long id) { commentRepository.deleteById(id); }
+
+    @Transactional
+    public void deleteByTarget(Comment.TargetType type, Long targetId) {
+        commentRepository.deleteByTargetTypeAndTargetId(type, targetId);
+    }
 }

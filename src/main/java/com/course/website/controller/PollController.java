@@ -75,6 +75,16 @@ public class PollController {
         return "redirect:/polls/" + id;
     }
 
+    @PostMapping("/teacher/polls/{id}/delete")
+    public String deletePoll(@PathVariable Long id, RedirectAttributes ra) {
+        Poll poll = pollService.findById(id);
+        voteService.deleteByPoll(poll);
+        commentService.deleteByTarget(Comment.TargetType.POLL, id);
+        pollService.deleteById(id);
+        ra.addFlashAttribute("success", "Poll deleted.");
+        return "redirect:/teacher/dashboard";
+    }
+
     @GetMapping("/teacher/polls/new")
     public String newPollForm(Model model) {
         model.addAttribute("poll", new Poll());
@@ -98,10 +108,4 @@ public class PollController {
         return "redirect:/teacher/dashboard";
     }
 
-    @PostMapping("/teacher/polls/{id}/delete")
-    public String deletePoll(@PathVariable Long id, RedirectAttributes ra) {
-        pollService.deleteById(id);
-        ra.addFlashAttribute("success", "Poll deleted.");
-        return "redirect:/teacher/dashboard";
-    }
 }
