@@ -27,7 +27,7 @@
     <div class="col-md-6">
         <div class="card shadow-sm mb-4">
             <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
-                <h5 class="mb-0">&#128218; Lectures</h5>
+                <h5 class="mb-0">Lectures</h5>
                 <span class="badge bg-light text-primary">${lectures.size()} total</span>
             </div>
             <div class="list-group list-group-flush">
@@ -54,7 +54,7 @@
     <div class="col-md-6">
         <div class="card shadow-sm mb-4">
             <div class="card-header bg-success text-white d-flex justify-content-between align-items-center">
-                <h5 class="mb-0">&#128202; Polls</h5>
+                <h5 class="mb-0">Polls</h5>
                 <span class="badge bg-light text-success">${polls.size()} total</span>
             </div>
             <div class="list-group list-group-flush">

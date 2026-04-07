@@ -5,7 +5,7 @@
     <div class="col-md-5">
         <div class="card shadow">
             <div class="card-header bg-dark text-white text-center">
-                <h4 class="mb-0">&#128274; Login</h4>
+                <h4 class="mb-0">Login</h4>
             </div>
             <div class="card-body p-4">
                 <c:if test="${param.error != null}">

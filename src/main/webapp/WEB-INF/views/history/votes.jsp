@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@ include file="/WEB-INF/views/layout/_header.jsp" %>
-<h2 class="mb-4">&#128202; My Voting History</h2>
+<h2 class="mb-4">My Voting History</h2>
 <div class="card shadow-sm">
 <c:choose><c:when test="${empty votes}"><div class="card-body text-center text-muted py-5"><h4>No votes yet.</h4><p>Go to <a href="/">the home page</a> to find polls and cast your vote!</p></div></c:when>
 <c:otherwise><div class="table-responsive"><table class="table table-hover mb-0">

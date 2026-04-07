@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@ include file="/WEB-INF/views/layout/_header.jsp" %>
 <div class="row justify-content-center"><div class="col-md-8">
-<div class="card shadow"><div class="card-header bg-success text-white"><h4 class="mb-0">&#128202; Create New Poll</h4></div>
+<div class="card shadow"><div class="card-header bg-success text-white"><h4 class="mb-0">Create New Poll</h4></div>
 <div class="card-body p-4">
 <form action="/teacher/polls" method="post">
 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
