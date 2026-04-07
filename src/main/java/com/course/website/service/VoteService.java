@@ -1,14 +1,15 @@
 package com.course.website.service;
 
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import com.course.website.entity.Poll;
 import com.course.website.entity.User;
 import com.course.website.entity.Vote;
 import com.course.website.repository.VoteRepository;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
-import java.util.List;
-import java.util.Optional;
 
 @Service
 public class VoteService {
@@ -37,4 +38,7 @@ public class VoteService {
     }
 
     public List<Vote> findByUser(User user) { return voteRepository.findByUser(user); }
+
+    @Transactional
+    public void deleteByPoll(Poll poll) { voteRepository.deleteByPoll(poll); }
 }

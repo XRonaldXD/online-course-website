@@ -8,4 +8,5 @@ import java.util.List;
 public interface CommentRepository extends JpaRepository<Comment, Long> {
     List<Comment> findByTargetTypeAndTargetIdOrderByCreatedAtAsc(Comment.TargetType targetType, Long targetId);
     List<Comment> findByAuthorOrderByCreatedAtDesc(User author);
+    void deleteByTargetTypeAndTargetId(Comment.TargetType targetType, Long targetId);
 }
