@@ -2,7 +2,7 @@
 <%@ include file="/WEB-INF/views/layout/_header.jsp" %>
 <div class="row justify-content-center"><div class="col-md-7">
 <c:if test="${not empty success}"><div class="alert alert-success alert-dismissible fade show">${success} <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div></c:if>
-<div class="card shadow"><div class="card-header bg-dark text-white"><h4 class="mb-0">&#128100; Edit Profile</h4></div>
+<div class="card shadow"><div class="card-header bg-dark text-white"><h4 class="mb-0">Edit Profile</h4></div>
 <div class="card-body p-4">
 <div class="mb-3"><label class="form-label fw-bold">Username</label><input type="text" class="form-control" value="${user.username}" disabled><small class="text-muted">Username cannot be changed.</small></div>
 <div class="mb-3"><label class="form-label fw-bold">Role</label><input type="text" class="form-control" value="${user.role}" disabled></div>

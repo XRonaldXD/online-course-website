@@ -5,7 +5,7 @@
 <nav aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="/">Home</a></li><li class="breadcrumb-item active">Poll</li></ol></nav>
 <div class="card shadow-sm mb-4">
     <div class="card-header bg-success text-white d-flex justify-content-between align-items-center">
-        <h3 class="mb-0">&#128202; Poll</h3>
+        <h3 class="mb-0">Poll</h3>
         <sec:authorize access="hasRole('TEACHER')">
             <form action="/teacher/polls/${poll.id}/delete" method="post" class="d-inline" onsubmit="return confirm('Delete this poll?')">
                 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
@@ -50,7 +50,7 @@
     </div>
 </div>
 <div class="card shadow-sm">
-    <div class="card-header bg-light"><h5 class="mb-0">&#128172; Comments (${comments.size()})</h5></div>
+    <div class="card-header bg-light"><h5 class="mb-0">Comments (${comments.size()})</h5></div>
     <div class="card-body">
         <c:forEach var="comment" items="${comments}">
             <div class="d-flex mb-3"><div class="flex-grow-1 ms-3">

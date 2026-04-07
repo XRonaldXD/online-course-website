@@ -16,7 +16,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="/">&#127979; COMP 3800</a>
+        <a class="navbar-brand" href="/">COMP 3800</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -28,14 +28,14 @@
                     <li class="nav-item"><a class="nav-link" href="/history/comments">My Comments</a></li>
                 </sec:authorize>
                 <sec:authorize access="hasRole('TEACHER')">
-                    <li class="nav-item"><a class="nav-link" href="/teacher/dashboard">&#128187; Teacher Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/teacher/dashboard">Teacher Dashboard</a></li>
                 </sec:authorize>
             </ul>
             <ul class="navbar-nav">
                 <sec:authorize access="isAuthenticated()">
                     <li class="nav-item">
                         <a class="nav-link" href="/profile">
-                            &#128100; <sec:authentication property="name" />
+                            <sec:authentication property="name" />
                         </a>
                     </li>
                     <li class="nav-item">

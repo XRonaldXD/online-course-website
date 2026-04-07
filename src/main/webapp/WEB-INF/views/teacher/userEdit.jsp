@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@ include file="/WEB-INF/views/layout/_header.jsp" %>
 <div class="row justify-content-center"><div class="col-md-7">
-<div class="card shadow"><div class="card-header bg-warning"><h4 class="mb-0">&#9998; Edit User: ${user.username}</h4></div>
+<div class="card shadow"><div class="card-header bg-warning"><h4 class="mb-0">Edit User: ${user.username}</h4></div>
 <div class="card-body p-4">
 <div class="mb-3"><label class="form-label fw-bold">Username</label><input type="text" class="form-control" value="${user.username}" disabled></div>
 <form action="/teacher/users/${user.id}" method="post">
